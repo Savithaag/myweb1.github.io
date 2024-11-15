@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:100vh;
+            background: linear-gradient(to top,rgb(52,0,61), rgb(0,57,61));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ball1,.ball2,.ball3{
+            margin: 20px;
+            width:50px;
+            height:50px;
+            box-shadow: 0 24vh 10px 0 rgba(0,0,0,0),
+            inset 0 15px 10px 0px rgba(255,255,255,0.2),
+            inset 0 -12px 15px 0px rgba(0,0,0,0.5);
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            animation: bounce 1000ms infinite alternate;
+        }
+
+        .ball2{
+            animation-delay: 300ms;
+        }
+        .ball3{
+            animation-delay: 600ms;
+        }
+        @keyframes bounce{
+            0%{
+                transform:translate(0px,12vh);
+            }
+            75%{
+                height:55px;
+                width:44px;
+                margin:20px;
+                box-shadow: 0 24vh 10px 0 rgba(0,0,0,0.4),
+                inset 0 10px 9px 0px rgba(255,255,255,0.2),
+                inset 0 -15px 17px 0px rgba(0,0,0,0.5);
+            }
+            100%{
+                transform:translate(0px,12vh);
+                height:30px;
+                width:60px;
+                margin:10px;
+                box-shadow: 0 10px 10px 0 rgba(0,0,0,0.4),
+                inset 0 5px 4px 0px rgba(255,255,255,0.4),
+                inset 0 -5px 9px 0px rgba(255,255,255,0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+    <div class="ball3"></div>
+</body>
+</html>
